@@ -9,8 +9,8 @@
 <script type="text/javascript" src="mountain/js/jquery.cycle.all.min.js"></script>
 <script type="text/javascript" src="mountain/js/superfish.js"></script>
 <script type="text/javascript" src="mountain/js/script.js"></script>
-
 </head>
+    
 
 <body>
 
@@ -19,22 +19,22 @@
 <div id="container-inner">
 
 	<div id="header">
-        <table>
-            <tr>
-                <td>
-                    <h1><a href="#">Citas Santander</a></h1>
-                   
-                    <p>Tus citas... Simple</p>
-                </td>
-                <td>
-                    <button type="button" onclick="alert('Ha cerrado sesion')" style="background-color:#90DA11;padding:13px;float:right;text-transform:uppercase;font-family: Arial, Helvetica, sans-serif;color:white;font-size:14px;border-style:none">Cerrar Sesion</button>
-                </td>
-            </tr>
-        </table>
+        <div style="float:left">
+            <h1><a href="inicio.html" style="margin:0px">Citas Santander</a></h1>
+            <p style="float:left">Tus citas... Simple</p>
+        </div>
+        
+        <div style="float:right">
+            <br><br>
+            <input type="submit" value="Cerrar Sesion" onclick="alert('Ha cerrado su sesion')" style="float:right"/>
+        </div>
+        
+        
+        <div class="clear"></div>
         
     </div><!-- end header -->
     
-    <div id="nav">
+    <div id="nav" style="float:left">
     	<ul>
         	<li><a href="#">Inicio</a></li>
             <li><a href="#">Servicios</a></li>
