@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Citas Santander - Manejador de Consultorios</title>
+<title>Citas Santander - Info de Consultorios</title>
 <link rel="stylesheet" href="mountain/styles.css" type="text/css" />
 <link href="styles.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="mountain/js/jquery-1.3.2.min.js"></script>
@@ -20,18 +20,20 @@
 
   <div id="header">
         <div style="float:left">
-            <h1><a href="agendarCita.html" style="margin:0px">Citas Santander</a></h1>
+                       <h1><a href="inicio.html" style="margin:0px"><img src="SWCIsantander.jpg" alt="citas santander" style="width:300px"></a></h1>
+
             <p style="float:left">Tus citas... Simple</p>
         </div>
         
-        <div style="float:right">
-            <br><br>
             <a href="inicio.html"><input type="submit" value="Cerrar Sesion" onclick="alert('Ha cerrado su sesion')" style="float:right;font-family: Tahoma,Geneva,sans-serif"/></a>
         </div>
         
         
+        
         <div class="clear"></div>
+        
     </div><!-- end header -->
+    
     <div id="nav" style="float:left">
       <ul>
           <li><a href="#">Inicio</a></li>
@@ -46,40 +48,37 @@
 
     <div id="main">
     <div id="content">
-      <h2>Manejador de consultorios      </h2>
-      <p>Seleccione las opciones que desee buscar para agregar un consultorio.</p>
-      <form name="form2" method="post" action="">
-        <label for="Tamaño">Tamaño</label>
-        <select name="Tamaño" id="Tamaño">
-          <option>Grande</option>
-          <option>Mediano</option>
-          <option>Pequeño</option>
-          <option>Sala de cirugia</option>
-        </select>
-    </form>
-      <p>&nbsp;</p>
+      <h2>Trabaje sobre los consultorios</h2>
+      <h2>   <img name="fotoConsultorioDB" src="" width="200" height="200" alt=""></h2>
       <form name="form1" method="post" action="">
-        <label>Consultorios
-          <select name="consultorios" id="consultorios">
-            <option>Odontologia</option>
-            <option>Pediatria</option>
-            <option>Ginecologia</option>
-            <option>Psiquiatria</option>
+        <p>
+          <label for="Consultorios">    </label>ESCOJA EL CONSULTORIO DE LA LISTA
+          <select name="Consultorios" id="Consultorios">
             <option>Radiologia</option>
+            <option>Ginecologia</option>
+            <option>Obstetria</option>
+            <option>Terapia</option>
           </select>
-        </label>
-        <br><input type="submit" value = "Agregar Consultorio">
+          </p>
+        <p><br>
+          <a class="button" href="PerfilConsultorio.html">Escoger Consultorio</a>
+          <input type="submit" value = "Eliminar especialidad ">
+          <input type="submit" value = "Eliminar consultorio">
+          <br>
+        </p>
+        </p>
       </form>
     </div>
     <!-- end content -->
         
-        <div class="sidebar">
-          <ul style="list-style-type:none">
-            <li><input type="submit" value= "Ver consultorios"></li>
-                           
+      <div class="sidebar">
+          
+        <h4>&nbsp;</h4>
+        <ul style="list-style-type:none">
+          <li><a class="button" href="ManejadorConsultorios.html">Volver a Manejo de consultorios</a></li>
           </ul>
                      
-      </div><!-- end sidebar -->
+        </div><!-- end sidebar -->
         
 
       <div class="clear"></div>
