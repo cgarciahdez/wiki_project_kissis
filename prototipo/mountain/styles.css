@@ -160,12 +160,11 @@ li ol, li ul {
 	color: #fff;
 }
 
-#slogan
+p#slogan
 {
-    font-color:#555;
-    padding-left: 1000px;
-    
-        
+    color:#529d4f;
+    padding-left: 50px;
+    font-size: 20px;    
 }
 
 
@@ -889,6 +888,7 @@ div#formulario{
 
 div.contenido
 {
+    padding-top: 100px;
     width: 100%
 }
 
@@ -903,3 +903,11 @@ div#info_home{
     text-align: justify;
     padding: 20px;
 }
+
+.textoBorde{
+    color:#90DA11;
+    text-shadow: 0px 0 black, 0 1px rgba(85, 85, 85, 0.47), 1px 0 rgba(85, 85, 85, 0.47), 0 0px black;
+}
+
+input{
+    text-align:
