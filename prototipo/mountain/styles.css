@@ -156,8 +156,16 @@ li ol, li ul {
 }
 
 #nav ul li a:hover {
-	background: #000;
+	background: #49b2e0;
 	color: #fff;
+}
+
+#slogan
+{
+    font-color:#555;
+    padding-left: 1000px;
+    
+        
 }
 
 
@@ -876,16 +884,22 @@ a.infor{
 
 
 div#formulario{
-    float: none;
-    width: 600px;
+    width: 100%;
 }
 
 div.contenido
 {
-    width: 50%
+    width: 100%
 }
 
 a#escondido{
     opacity: 0;
     margin-left: -50px
+}
+
+div#info_home{
+    font-size: 20px; 
+    float: right;
+    text-align: justify;
+    padding: 20px;
 }
