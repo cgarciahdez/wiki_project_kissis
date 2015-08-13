@@ -1,18 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Citas Santander</title>
+<title>Citas Santander - Ingresar Horario</title>
 <link rel="stylesheet" href="mountain/styles.css" type="text/css" />
 
 <script type="text/javascript" src="mountain/js/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="mountain/js/jquery.cycle.all.min.js"></script>
 <script type="text/javascript" src="mountain/js/superfish.js"></script>
 <script type="text/javascript" src="mountain/js/script.js"></script>
-
-
-
 </head>
+    
 
 <body>
 
@@ -21,19 +19,28 @@
 <div id="container-inner">
 
 	<div id="header">
-    	<h1><a href="#">Citas Santander</a></h1>
-  		<p>nice site slogan</p>
+        <div style="float:left">
+            <h1><a href="inicio.html" style="margin:0px"><img src="SWCIsantander.jpg" alt="citas santander" style="width:300px"></a></h1>
+            <p style="float:left">Tus citas... Simple</p>
+        </div>
+        
+        <div style="float:right">
+            <br><br>
+            <a href="inicio.html"><input type="submit" value="Iniciar Sesión" onclick="alert('Ha cerrado su sesion')" style="float:right;font-family: Tahoma,Geneva,sans-serif"/></a>
+        </div>
+        
+        
         <div class="clear"></div>
+        
     </div><!-- end header -->
     
-    <div id="nav">
+    <div id="nav" style="float:left">
     	<ul>
-        	<li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
+        	<li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Doctores</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li><a href="#">kissis</a></li>
         </ul>
     </div><!-- end nav -->
     
@@ -68,24 +75,30 @@
     <div id="main">
 		<div class="contenido">
 			<h2>Bienvenido al sistema de citas Santander</h2>
-            <form class="nueva" id="signup-form" method="post" action="#">
+            <form class="nueva" id="signup-form" action="#">
                 <div id="formulario">
 				    <a class="infor">Identificación</a><input type="email" name="email" id="email" placeholder="Identificación" />
-                
+        
                     
-                    <a class="infor">Clave</a><input type="email" name="email" id="email" placeholder="*****" />
+                    <a class="infor">Clave</a><input type="password" name="email" id="email" placeholder="••••••" />
                     <br>
                     <br>
-				    <input type="submit" value="Iniciar Sesión"/>
-                    <input type="submit" value="Registrarse" />
+				    <!---<input type="submit" value="Iniciar Sesión" href="mountain/index.html">--->
+                    <!---<input type="submit" value="Registrarse" />--->
+                    <a class="button" href="mountain/index.html">Iniciar Sesion</a>
+                    <a class="button" href="http://www.google.com">Registrarse</a>
                     
-                    </div>
+                </div>
+                <div id="info_home">
+                    <p>
+                        En el sistema de citas Santander, nos importa tu salud. Por eso, hemos creado un sistema de citas que se ajusta a tus necesidades y que te permitirá agendar, cancelar, y consultar tus citas sin problema. Para hacerlo, basta con que crees una cuenta con nosotros y empieces a disfrutar de los beneficios.
+                    
+                    </p>
+                </div>
 			</form>
 
-            
-          
-
         </div><!-- end content -->
+        
         
         
         
