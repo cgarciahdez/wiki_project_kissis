@@ -1,25 +1,30 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="ui.bootstrap.demo">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Citas Santander - Ingresar Horario</title>
-<link rel="stylesheet" href="mountain/styles.css" type="text/css" />
-<link rel="stylesheet" href="css/theme.min.css" type="text/css" />
-<script src="http://code.jquery.com/jquery.js"></script>
-<script type="text/javascript" src="css/bootstrap.js"></script>
-<script type="text/javascript" src="css/npm.js"></script>
-<script type="text/javascript" src="mountain/js/jquery-1.3.2.min.js"></script>
-<script type="text/javascript" src="mountain/js/jquery.cycle.all.min.js"></script>
-<script type="text/javascript" src="mountain/js/superfish.js"></script>
-<script type="text/javascript" src="mountain/js/script.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Citas Santander - Ingresar Horario</title>
+    <link rel="stylesheet" href="mountain/styles.css" type="text/css" />
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="css/bootstrap.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
+    <script src="js/example.js"></script>
+    <script src="js/miJavaScript.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/theme.min.css" type="text/css" />
+
 </head>
-    
+
 
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" style="height:50px">
         <div class="container-fluid">
             <div class="navbar-header">
-                        <a class="navbar-brand" href="home.html"><img src="SWCIsantander.png" alt="citas santander" style="width:150px;margin-top:-10px"></a>
+                <a class="navbar-brand" href="home.html"><img src="SWCIsantander.png" alt="citas santander" style="width:150px;margin-top:-10px"></a>
             </div>
             <div>
                 <ul class="nav navbar-nav">
@@ -41,61 +46,215 @@
             </div>
         </div>
     </nav>
-    
-    <div class="clear"><br></div>
-    <div class="clear"><br></div>
-    <div class="clear"><br></div>
-    
-    <div class="container" style="width:1018px">
-		<div class="col-md-9" style="border-right: 1px solid #90DA11">
-			<h2>Selecciona tus horarios</h2>
 
-            <form action="">
-                Dia:
-                <input type="date" name="dia">
-                <input type="submit" value="Ver Horarios">
-            </form>
-            <br>
-            
-        </div><!-- end content -->
-        
+    <div class="clear">
+        <br>
+    </div>
+    <div class="clear">
+        <br>
+    </div>
+    <div class="clear">
+        <br>
+    </div>
+
+    <div class="container" style="width:1018px">
+        <div class="col-md-9" style="border-right: 1px solid #90DA11">
+            <style>
+                .full button span {
+                    background-color: limegreen;
+                    border-radius: 32px;
+                    color: black;
+                }
+                
+                .partially button span {
+                    background-color: orange;
+                    border-radius: 32px;
+                    color: black;
+                }
+                
+                .btn ,.btn-default{
+                    color: #90DA11;
+                    background-color: white;
+                    border-color: #e3e3e3;
+                }
+                span{
+                 color:#90DA11;   
+                }
+                
+                i, strong{
+                    color:black;
+                }
+                
+                .btn-default[disabled]{
+                    background-color: #d1d4ca;
+                    border-color: #e3e3e3;
+                    color:black;
+                }
+                .btn-default[disabled]>span{
+                 color:#a0b57b;   
+                }
+                
+                th.text-center, table[role="width"]>thead>tr>th{
+                    background-color: #f2f2f2;
+                    color:black;
+                }
+                
+                
+            </style>
+            <div ng-controller="DatepickerDemoCtrl">
+                <!--<pre>Selected date is: <em >{{dt | date:'fullDate' }}</em></pre>!-->
+
+                <div clas="row">
+                    <div class="col-md-6">
+                        <div style="display:inline-block; min-height:290px;">
+                            <datepicker datepicker-mode="year" ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="container" id="dia" ng-show="variable">
+                            <form>
+                                <table class="table table-bordered" style="width:20%">
+                                    <thead>
+                                        <tr>
+                                            <th>{{nomDia}}</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>7:00 am-8:00 am </td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8:00 am-9:00 am</td>
+                                            <td>
+                                                <input type="checkbox">
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9:00 am-10:00 am</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10:00 am-11:00 am</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11:00 am-12:00 pm</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>12:00 pm-1:00 pm</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1:00 pm-2:00 pm</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2:00 pm-3:00 pm</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3:00 pm-4:00 pm</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5:00 pm-6:00 pm</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6:00 pm-7:00 pm</td>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <input type="submit" value="enviar">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- end content -->
+
         <div class="col-md-3 sidebar">
             <h4 style="text-align:right">Mi Menu</h4>
-                <table>
-                    <tr>
-                        <a href="perfilDoctor.html"><input type="submit" value="Mi Perfil" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%"/></a>
-                    </tr>
-                    
-                    <tr>
-                        <a href="editarInformacionDoctor.html"><input type="submit" value="Modificar Mi Perfil" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%"/></a>
-                    </tr>
-                    
-                    <tr>
-                        <a href="ingresarHorariosAtencion.html"><input type="submit" value="Seleccionar Horarios" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%"/></a>
-                    </tr>
-                    
-                    <tr>
-                        <a href="#"><input type="submit" value="Mis Citas" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%"/></a>
-                    </tr>
-               
-                    <tr>
-                        <a href="#"><input type="submit" value="Otro" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%"/></a>
-                    </tr>
-                  
-                    <tr>
-                        <a href="#"><input type="submit" value="Otro" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%"/></a>
-                    </tr>
-                     
-                </table>
-        </div><!-- end sidebar -->
-        
-    </div><!-- end main -->
+            <table>
+                <tr>
+                    <a href="perfilDoctor.html">
+                        <input type="submit" value="Mi Perfil" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%" />
+                    </a>
+                </tr>
 
-    <div class="clear"><br></div>
-    
+                <tr>
+                    <a href="editarInformacionDoctor.html">
+                        <input type="submit" value="Modificar Mi Perfil" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%" />
+                    </a>
+                </tr>
+
+                <tr>
+                    <a href="ingresarHorariosAtencion.html">
+                        <input type="submit" value="Seleccionar Horarios" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%" />
+                    </a>
+                </tr>
+
+                <tr>
+                    <a href="#">
+                        <input type="submit" value="Mis Citas" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%" />
+                    </a>
+                </tr>
+
+                <tr>
+                    <a href="#">
+                        <input type="submit" value="Otro" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%" />
+                    </a>
+                </tr>
+
+                <tr>
+                    <a href="#">
+                        <input type="submit" value="Otro" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%" />
+                    </a>
+                </tr>
+
+            </table>
+        </div>
+        <!-- end sidebar -->
+
+    </div>
+    <!-- end main -->
+
+    <div class="clear">
+        <br>
+    </div>
+
     <div id="footer">
-	<p>&copy; YourSite 2011. Design by <a href="http://www.electrictowelrail.org.uk" target="_blank">Electric Towel Rail</a>  | <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a></p>
-</div><!-- end footer -->
+        <p>&copy; YourSite 2011. Design by <a href="http://www.electrictowelrail.org.uk" target="_blank">Electric Towel Rail</a> | <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional"><abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" title="This page validates as CSS"><abbr title="Cascading Style Sheets">CSS</abbr></a></p>
+    </div>
+    <!-- end footer -->
 
 </body>
+
 </html>
