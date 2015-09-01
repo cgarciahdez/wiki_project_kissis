@@ -1,5 +1,6 @@
 body {
-    background: #E7E7E7;
+    background: #ffffff;
+    background-image: url(images/1.jpg)
     margin: 0;
     padding: 0;
     font-family: Tahoma, Geneva, sans-serif;
@@ -68,7 +69,7 @@ ul,
 ol {
     margin: 0 0 35px 35px;
 }
-
+/*
 li {
     padding-bottom: 10px;
 }
@@ -78,7 +79,7 @@ li ul {
     font-size: 1.0em;
     margin-bottom: 0;
     padding-top: 5px;
-}
+}*/
 
 #container {
     width: 960px;
@@ -329,7 +330,7 @@ div#slideshow {
 /*----------- Footer -----------------*/
 
 #footer {
-    background-color: #E7E7E7;
+    background-color: #ffffff;
     margin: 0 auto;
     padding: 10px 0 50px;
     width: 960px;
@@ -691,6 +692,7 @@ textarea {
     padding: 0.75em 1em;
 }
 
+/*--
 input[type="checkbox"],
 input[type="radio"] {
     -moz-appearance: none;
@@ -765,7 +767,7 @@ input[type="checkbox"] + label:before {
 input[type="radio"] + label:before {
     border-radius: 100%;
 }
-
+--*/
 ::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.5) !important;
     opacity: 1.0;
@@ -953,6 +955,8 @@ a#escondido {
 }
 
 .textoBorde {
+    margin-top: -50px;
+    font-size: 50px;
     color: #90DA11;
     text-shadow: 0px 0 black, 0 1px rgba(85, 85, 85, 0.47), 1px 0 rgba(85, 85, 85, 0.47), 0 0px black;
 }
@@ -964,3 +968,5 @@ a#escondido {
 #info_doc {
     margin-left: 50px;
 }
+
+.gi-5x{font-size: 6em;}

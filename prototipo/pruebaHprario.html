@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="ui.bootstrap.demo">
+
+<head>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
+    <script src="js/example.js"></script>
+    <script src="js/miJavaScript.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <style>
+        .full button span {
+            background-color: limegreen;
+            border-radius: 32px;
+            color: black;
+        }
+        
+        .partially button span {
+            background-color: orange;
+            border-radius: 32px;
+            color: black;
+        }
+    </style>
+    <div ng-controller="DatepickerDemoCtrl">
+        <pre>Selected date is: <em >{{dt | date:'fullDate' }}</em></pre>
+
+        <h4>Inline</h4>
+        <div style="display:inline-block; min-height:290px;">
+            <datepicker datepicker-mode="year" ng-model="dt" min-date="minDate" show-weeks="true" class="well well-sm" custom-class="getDayClass(date, mode)"></datepicker>
+        </div>
+
+        <div class="container" id="dia" ng-show="variable">
+            <form>
+                <table class="table table-bordered" style="width:50%">
+                    <thead>
+                        <tr>
+                            <th>{{nomDia}}</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7:00 am-8:00 am </td>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8:00 am-9:00 am</td>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9:00 am-10:00 am</td>
+                            <td>
+                                <input type="checkbox">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="submit" value="enviar">
+            </form>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

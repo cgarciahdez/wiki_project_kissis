@@ -16,6 +16,7 @@
 </head>
     
 
+
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top" style="height:50px">
         <div class="container-fluid">
@@ -32,7 +33,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><img src="imagenesPaginas/fotoDePerfil.jpg" alt="some_text" style= "width:50px;height:40px;margin:4px"> </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">Andres Murillo<span class="caret"></span></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded"false">Andres Murillo<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="perfilAdministrador.html"><span class="glyphicon glyphicon-user"></span> Mi Perfil</a></li>
                             <li><a href="index.html"><span class="glyphicon glyphicon-remove"></span> Cerrar Sesion</a></li>
@@ -49,70 +50,33 @@
 
     <div class="container" style="width:1018px">
 		<div class="col-md-9" style="border-right: 1px solid #90DA11">
-			<h2>Agregar Consultorio</h2>
+			<h2>Medico Actuales</h2>
             
-            <img src ="imagenesPaginas\fotoDePerfil.jpg" alt="Foto de perfil" border = "3" style="width:420px;height:270px;">
-            <br><br>
-            <br>
-            <a href=""><input type="submit" value="Buscar Foto" style= "width:168px;height:40px;";"float:center;font-family:Tahoma,Geneva,sans-serif"/></a>
-            <br>
-            <br>
-            <div class="col-md-4" style="padding:0px"><b>Especialidad:</b></div>
-            <div class="col-md-5"> <select name="Especialidad" id="Especialidad" style="height:25px">
-            <option>Medicina General</option>
-            <option>Audiología</option>
-            <option>Dermatología</option>
-       		<option>Ginecología</option>
-        	<option>Oftamología</option>
-            <option>Reumatología</option>
-            <option>Urología</option>
-            <option>Pediatría</option>
-            <option>Ecografía</option>
-            </select>
-            </div>
-            <br>
-            <br>
-            <div class="col-md-4" style="padding:0px"><b>Id. de Consultorio:</b></div>
-            <div class="col-md-5"><input type="text" name="ConsultorioID" value="ConsultorioID" style="height:25px"></div>
-            <br>
-            <br>
-            <div class="col-md-4" style="padding:0px"><b>Tipo de Consultorio:</b></div>
-            <div class="col-md-5"> <select name="TipoConsultorio" id="TipoConsultorio" style="height:25px">
-            <option>Consultas</option>
-            <option>Sala de Cirugia</option>
-            <option>Terapia</option>
-            <option>Radiología</option>
-            </select>
-            </div>
-            <br>
-            <br>
-            <div class="col-md-4" style="padding:0px"><b>Extensión del Consultorio:</b></div>
-            <div class="col-md-5"><input type="text" name="noIdentificacion" value="2035" style="height:25px"></div>
-            <br>
-            <br>
-            <div class="col-md-4" style="padding:0px"><b>Tamaño:</b></div>
-            <div class="col-md-5"> <select name="Genero" id="Genero" style="height:25px">
-            <option>Grande</option>
-            <option>Mediano</option>
-            <option>Pequeño</option>
-            </select>
-            </div>
-            <br>
-            <br>
-            <div class="col-md-4" style="padding:0px"><b>Equipos del consultorio:</b></div>
-    
-            <div class="checkbox disabled">
-  <label>
-    <input type="checkbox" value="" disabled>
-    Option two is disabled
-  </label>
+             <br>
+             
+              <img src ="MedicaEjemplo.png" alt="Foto de medico" border = "3" style="width:200px;height:200px;">
+               <br>
+               <br>
+                <a href="manejadorMedicos.html" style="float:left"><span class="glyphicon glyphicon-remove-sign"></span> Eliminar Medico</a>
+                
+                
+               <br>
+               <br>
+              
+           
+            <div class="list-group">
+  <a href="#" class="list-group-item active">Medico1</a>
+  <a href="#" class="list-group-item">Medico2</a>
+  <a href="#" class="list-group-item">Medico3</a>
 </div>
+            
+        
+            <div class="col-md-8"><input type="text" name="medicoBuscar" value="Ingrese el nombre o cedula del medico." style="height:25px"></div>
+           
+           <a href="perfilAdministrador.html"><span class="glyphicon glyphicon-search"></span> Buscar Medico</a>
+             
             <br>
             
-            <br>
-            <a href="perfilAdministrador.html"><input type="submit" value="Guardar" onclick="alert('Información actualizada')" style="float:right;font-family:Tahoma,Geneva,sans-serif"/></a>
-            <a href="perfilAdministrador.html"><input type="submit" value="Cancelar" style="float:left;font-family:Tahoma,Geneva,sans-serif"/></a>
-                    
         </div><!-- end content -->
         
         <div class="col-md-3 sidebar">
@@ -135,7 +99,7 @@
                     </tr>
                
                     <tr>
-                        <a href="manejadorMedicos.html"><input type="submit" value="Medicos" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%"/></a>
+                        <a href=""><input type="submit" value="Medicos" style="margin:10px;float:left;font-family:Tahoma,Geneva,sans-serif;width:96%"/></a>
                     </tr>
                   
                     <tr>
