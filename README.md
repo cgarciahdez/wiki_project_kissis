@@ -1,5 +1,7 @@
 La pagina del grupo se despliega en: http://cgarciahdez.github.io/
 
+Traza de requerimientos: https://docs.google.com/spreadsheets/d/1CcVE0pIkBFMjKp3bzFMVjP7n2ETxrfuVtFkRghBKLhE/edit#gid=1640104449
+
 Nombre Del Grupo: Kissis
 
 Mantra: Keep It Simple. Nuestra organización se basa en llevar a cabo sus operaciones de la forma mas simple posible con la
